@@ -4,7 +4,7 @@ import {Button, Paginator, Skeleton} from "primevue";
 import axios from "axios";
 import SetImage from "@/components/SetImage.vue"
 import {useRoute, useRouter} from "vue-router";
-import Fillter from "@/components/product/Fillter.vue";
+import Filter from "@/components/product/Filter.vue";
 
 const router = useRouter()
 const route = useRoute()
@@ -68,7 +68,7 @@ onMounted(() => {
         <span>Products</span>
       </div>
       <div class="grid grid-cols-12 gap-6 max-xl:gap-2">
-        <Fillter class="max-xl:hidden"/>
+        <Filter class="max-xl:hidden"/>
         <main class="col-span-9 max-xl:col-span-12">
           <div class="grid grid-cols-3 gap-6 max-xxl:grid-cols-2 max-xl:grid-cols-3 max-xl:gap-2 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-4">
             <template v-if="products?.length && !getProductsLoading">
